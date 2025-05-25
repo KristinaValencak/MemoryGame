@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #A7C7E7, #D1A3D8, #4A6B8E);
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.score-container {
+  color: #fff;
+}
+
+.score {
+  margin-bottom: 15px;
+
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: linear-gradient(to right, #A7C7E7, #D1A3D8, #4A6B8E);
+  padding: 1rem;
+  perspective: 700px;
+}
+
+.card {
+  background-color: #fff;
+  height: 130px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.3s ease;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.back {
+  background: url("https://imgs.search.brave.com/SmAA6lrQv2aq70ShXwwhzOkFWoqoyuEvdcOXAfpvV2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTk0/NDMxMTIwMS92ZWN0/b3IvcXVlc3Rpb24t/bWFyay1pY29uLXdp/dGgtc2hhZG93LW9u/LXdoaXRlLWJhY2tn/cm91bmQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTI3dU1R/Q1J2dk1feFZKbU4w/Wjg1RFN3MTJvUXIw/VXV0Q3hYcWFyelVC/UUk9");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.card.open {
+  transform: rotateY(180deg);
+} 
+
+.game-over {
+  background-color: rgba(0,0,0,0.9);
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  max-width: 300px;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+button {
+  background: #214f56;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+.stop-clicking {
+  pointer-events: none;
+}
