@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import Card from './components/card';
+import Card from './components/Card';
 import GameOver from './components/GameOver';
 
 const App = () => {
